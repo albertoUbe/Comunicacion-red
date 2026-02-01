@@ -4,7 +4,8 @@ public interface Constantes {
     public static final int PUERTO = 8888;
     public static final String HOST = "localhost";
 
-    public static final String FORMAT = "%s%s";
+    public static final String FORMAT_ESCUCHA = "%s%d";
+    public static final String FORMAT_RESPUESTA = "%s%s";
     public static final String SERVIDOR_ESCUCHANDO = "Servidor escuchando en puerto...";
     public static final String MSG_SERVIDOR = "Esperando conexión.";
     public static final String MSG_CLIENTE = "Conexión establecida.";

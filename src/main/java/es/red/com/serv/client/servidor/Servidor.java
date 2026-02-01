@@ -10,13 +10,13 @@ import es.red.com.serv.client.compartido.Constantes;
 public class Servidor extends Conexion implements Constantes {
     public static void main(String[] args) throws IOException {
         try (ServerSocket servidor = new ServerSocket(PUERTO)) {
-            System.out.println(String.format(FORMAT, SERVIDOR_ESCUCHANDO, PUERTO));
+            System.out.printf(FORMAT_ESCUCHA, SERVIDOR_ESCUCHANDO, PUERTO);
 
             try (Socket cliente = servidor.accept()) {
                 enviar(cliente, MSG_SERVIDOR);
                 
                 String respuesta = recibir(cliente);
-                System.out.printf(FORMAT, SALTO_LINEA, respuesta);
+                System.out.printf(FORMAT_RESPUESTA, SALTO_LINEA, respuesta);
             }
         }
     }
